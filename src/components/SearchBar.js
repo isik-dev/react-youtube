@@ -10,7 +10,7 @@ class SearchBar extends React.Component {
   onFormSubmit = (event) => {
     event.preventDefault(); // this prevents the default behavior of onSubmit that makes our browser page to rerender as soon as we press enter/submit the form
 
-    // Todo: make sure we call the callback from the parent component
+    this.props.onFormSubmit(this.state.term);
   };
 
   render() {
